@@ -28,6 +28,9 @@ By analyzing these factors, the app aims to help businesses make data-driven dec
 - **Scikit-Learn**: Random Forest classifier for predictive modeling.
 - **Pickle**: Model serialization for easy deployment.
 
+  ## Page View - ![image](https://github.com/user-attachments/assets/a0c6cf76-ba1f-4f00-90dc-798a193fb825)
+
+
 ## 🚀 Getting Started
 
 ### Prerequisites
