@@ -3,8 +3,13 @@ import pickle
 
 
 def load_model():
-    with open('model.pkl', 'rb') as file:
-        return pickle.load(file)
+    try:
+        with open('model.pkl', 'rb') as file:
+            return pickle.load(file)
+    except FileNotFoundError:
+        st.error("Model file not found. Please ensure 'model.pkl' is in the correct directory.")
+    except Exception as e:
+        st.error(f"An error occurred while loading the model: {e}")
 
 model = load_model()
 
@@ -78,7 +83,7 @@ st.markdown(
     }
     </style>
     <div class="footer">
-        Made with ❤️ by <a href='https://github.com/sanskaryo' target='_blank'>Sanskar</a> | Empowering Smart Offers
+        Made with ❤️ by <a href='https://github.com/sanskaryo' target='_blank'>Sanskar</a> | Source Code on <a href='https://github.com/sanskaryo/Customer-Offer-Prediction' target='_blank'>GitHub</a>
     </div>
     """,
     unsafe_allow_html=True
